@@ -31,17 +31,17 @@ function getComputerChoice() {
 
 function playRound(humanChose, computerChose = getComputerChoice()) {
   if (humanChose === computerChose) {
-    result.textContent = `You chose ${humanChose} and Computer choice ${computerChose}, It's a tie`;
+    result.textContent = `You chose ${humanChose} and Computer chose ${computerChose}, It's a tie`;
   } else if (
     (humanChose === 'rock' && computerChose === 'scissors') ||
     (humanChose === 'paper' && computerChose === 'rock') ||
     (humanChose === 'scissors' && computerChose === 'paper')
   ) {
     humanScore++;
-    result.textContent = `You chose ${humanChose} and Computer choice ${computerChose}, You Win`;
+    result.textContent = `You chose ${humanChose} and Computer chose ${computerChose}, You Win`;
   } else {
     computerScore++;
-    result.textContent = `You chose ${humanChose} and Computer choice ${computerChose}, Computer Win`;
+    result.textContent = `You chose ${humanChose} and Computer chose ${computerChose}, Computer Win`;
   }
 
   elHumanScore.textContent = humanScore;
