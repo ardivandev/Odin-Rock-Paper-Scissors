@@ -32,12 +32,31 @@
       .author {
         font-size: 13px;
       }
+
+      .playBox {
+        font-size: 14px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
     </style>
   </head>
   <body>
     <div>
       <h1>Rock Paper Scissors</h1>
-      <p>To see the results, press F12 and select the Console tab.</p>
+      <div class="playBox">
+        <div class="buttons">
+          <button type="button" data-choice="rock">Rock</button>
+          <button type="button" data-choice="paper">Paper</button>
+          <button type="button" data-choice="scissors">Scissors</button>
+        </div>
+        <p id="result" aria-live="polite"></p>
+        <p>Human Score: <span id="human-score">0</span></p>
+        <p>Computer Score: <span id="computer-score">0</span></p>
+      </div>
       <p class="author">By Ardivan Nur Raihan Rahman | The Odin Project</p>
       <script src="script.js"></script>
     </div>
